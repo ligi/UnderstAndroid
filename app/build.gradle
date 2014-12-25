@@ -1,0 +1,53 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "21.1.2"
+
+    defaultConfig {
+        applicationId "org.ligi.understandroid"
+        minSdkVersion 10
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:21.0.3'
+
+    androidTestCompile 'com.android.support.test:testing-support-lib:0.1'
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.0'
+
+    androidTestCompile 'com.squareup.spoon:spoon-client:1.1.2'
+
+    androidTestCompile 'com.squareup.assertj:assertj-android:1.0.0'
+
+    androidTestCompile 'org.mockito:mockito-core:1.9.5'
+    androidTestCompile 'com.google.dexmaker:dexmaker-mockito:1.1'
+
+    // The Apache Software License, Version 2.0
+    compile 'com.googlecode.android-query:android-query:0.25.9'
+    compile 'com.jakewharton:butterknife:6.0.0'
+    compile 'joda-time:joda-time:2.6'
+    compile 'com.squareup:otto:1.3.5'
+
+    compile 'com.android.support:support-v4:21.0.3'
+    compile 'com.android.support:recyclerview-v7:21.0.0'
+    compile 'com.android.support:appcompat-v7:21.0.3'
+    compile 'com.android.support:cardview-v7:21.0.0'
+
+    compile 'org.ligi:AXT:0.31'
+    compile 'org.ligi:tracedroid:1.2'
+
+    compile 'com.google.zxing:core:3.1.0'
+
+
+}
